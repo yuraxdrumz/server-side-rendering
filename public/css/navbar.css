@@ -1,0 +1,19 @@
+.navbar {
+    display: flex;
+    min-height: 10%;
+    background-color: #63bafa;
+    justify-content: space-around;
+
+    align-items: center;
+}
+.left_side {
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+}
+
+.right_side {
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+}

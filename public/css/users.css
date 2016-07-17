@@ -1,0 +1,30 @@
+
+.users_list {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    flex: 1;
+    flex-direction: column;
+    width:20%;
+    list-style-type: none;
+    background-color: #6bb5ff;
+    color: black;
+    font-family: cursive;
+    font-size: 1.3rem;
+    border-radius: 5px;
+}
+
+.edit_button {
+    max-width: 15%;
+    font-family: cursive;
+    text-decoration: none;
+    color:black;
+
+}
+
+.button_div {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    margin: 0.8rem;
+}

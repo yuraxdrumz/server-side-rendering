@@ -1,0 +1,10 @@
+<form action="/api/edit/{{user._id}}" method="post">
+    <label for="">First Name</label><input type="text" value='{{user.first_name}}' name='first_name'>
+    <label for="">Email</label><input type="text" value='{{user.local.email}}' name='email'>
+    <button type="submit">Save Changes</button>
+    <input type="button" value='Delete' id='delete' data-id='{{user._id}}'>
+</form>
+
+<script src="/js/edit.js"></script>
+
+

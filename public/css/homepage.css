@@ -1,0 +1,21 @@
+
+
+.users_href {
+    text-decoration: none;
+    font-size: 1.3rem;
+    color:black;
+    font-family: cursive;
+}
+
+.funny_image{
+    margin-top: 5rem;
+    display: flex;
+    flex: 1;
+    background:url(../images/Livechat.jpg) 50% 50%;
+    background-size: cover;
+    width: 50%;
+    height: 50%;
+    margin-right: auto;
+    margin-left: auto;
+
+}
