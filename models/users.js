@@ -8,7 +8,6 @@ var UserSchema = new mongoose.Schema({
     },
     google:{
         id:String,
-        token:String,
         email:String,
         name:String
     },

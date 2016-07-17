@@ -1,22 +1,22 @@
 <div class="navbar">
-  {{#if user}}
-   <div class="left_side">
-        <a href="/users" class="users_href">users</a>
-                    <h3>{{user.first_name}}</h3>
+    {{#if user}}
+        <div class="left_side">
+            <a href="/users" class="users_href">users</a>
+            <h3>{{user.first_name}}</h3>
             <a href="/logout">logout</a>
-   </div>
-   {{/if}}
-   {{#unless user}}
-           <a href="/" class="users_href">Home</a>
+        </div>
+    {{/if}}
 
-   <div class="right_side">
-              <a href="/new-user" class="users_href">Register</a>
-
-       <form action="/login" method="post">
-           <input type="text" placeholder="Email..." name='email'>
-           <input type="password" placeholder="password..." name='password'>
-           <button type="submit">Login</button>
-       </form>
-   </div>
+    {{#unless user}}
+        <div class="right_side">
+            <a href="/" class="users_href">Home</a>
+            <a href="/new-user" class="users_href">Register</a>
+            <form action="/login" method="post">
+                <input type="text" placeholder="Email..." name='email'>
+                <input type="password" placeholder="password..." name='password'>
+                <button type="submit">Login</button>
+           </form>
+           <button><a href="/auth/google">click</a></button>
+       </div>
    {{/unless}}
 </div>
