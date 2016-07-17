@@ -57,7 +57,7 @@ passport.use('local-login',new LocalStrategy({
                             'local.email'  : email
                         });
 
-                        user.setPassword(req.body.password)
+                        user.setPassword(password);
                         console.log(user)
                         user.save()
                             .then(function() {

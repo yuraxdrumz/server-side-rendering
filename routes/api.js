@@ -14,7 +14,9 @@ router.post('/edit/:id',isLoggedIn,function(req,res){
     }).catch(function(err){
         res.render(err);
     })
-})
+});
+
+
 router.delete('/delete/:id',isLoggedIn,function(req,res){
     User.remove({_id:req.params.id}).exec()
     .then(function () {
@@ -23,5 +25,5 @@ router.delete('/delete/:id',isLoggedIn,function(req,res){
     .catch(function(err){
         res.send(err)
     });
-})
+});
 module.exports = router;

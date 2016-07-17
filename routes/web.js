@@ -9,7 +9,7 @@ router.get('/',function(req,res){
 });
 router.get('/users',isLoggedIn,function(req,res){
     User.find().exec().then(function(users){
-        res.render('users',{users:users,user:req.user});
+        res.render('users',{users:users,user:req.user[0]});
     }).catch(function(err){
         res.error(err);
     })

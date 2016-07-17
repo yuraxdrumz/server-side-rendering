@@ -3,13 +3,8 @@ var crypto = require('crypto');
 var UserSchema = new mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
     first_name:String,
-    last_name:String,
     local:{
-        email:{
-        type: String,
-        unique:true,
-        required:true
-        }
+        email:String
     },
     google:{
         id:String,
