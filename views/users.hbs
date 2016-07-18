@@ -1,9 +1,11 @@
 <ul class="users_list">
   {{#each users}}
-    <li>First Name: {{this.first_name}}</li>
-    <li>Email: {{this.local.email}}</li>
-    <div class="button_div">
-        <button class="edit_button"><a href="/edit/{{this._id}}" class="edit_button">Edit</a></button>
+   <div class="each_user">
+        <li>First Name: {{this.first_name}}</li>
+        <li>Email: {{this.local.email}}</li>
+        <div class="button_div">
+            <button class="edit_button"><a href="/edit/{{this._id}}" class="edit_button">Edit</a></button>
+        </div>
     </div>
   {{/each}}
 </ul>

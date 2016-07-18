@@ -2,9 +2,11 @@
 
 .users_href {
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color:black;
     font-family: cursive;
+    font-weight: 600;
+
 }
 
 .funny_image{

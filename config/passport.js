@@ -47,7 +47,6 @@ module.exports = function(passport){
             if(!req.user){
                 User.findOne({'google.id':profile.id}).exec()
                 .then(function(user){
-                    console.log(user)
                     if(user !== null){
                         user.google.id = profile.id
                         user.google.name = profile.name.givenName

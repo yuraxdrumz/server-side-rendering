@@ -3,7 +3,6 @@
     min-height: 10%;
     background-color: #63bafa;
     justify-content: space-around;
-
     align-items: center;
 }
 .left_side {
@@ -17,3 +16,26 @@
     flex: 1;
     justify-content: space-around;
 }
+
+
+
+.google_plus {
+    height: 100%;
+    margin-left: 1rem;
+    color: orange;
+}
+
+input[type="text"], input[type='password'] {
+  display: block;
+  margin: 0;
+  width: 100%;
+  font-family: sans-serif;
+  font-size: 1rem;
+  appearance: none;
+  box-shadow: none;
+  border-radius: 5px;
+}
+input[type="text"]:focus {
+  outline: none;
+}
+
