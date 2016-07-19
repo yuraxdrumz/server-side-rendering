@@ -3,9 +3,28 @@
    <div class="each_user">
         <li>First Name: {{this.first_name}}</li>
         <li>Email: {{this.local.email}}</li>
+        <button><a href="#">chat</a></button>
+<!--
+        <li class="online"><i class="fa fa-circle" aria-hidden="true"></i>
+</li>
+-->
+<!--
         <div class="button_div">
             <button class="edit_button"><a href="/edit/{{this._id}}" class="edit_button">Edit</a></button>
         </div>
+-->
     </div>
   {{/each}}
 </ul>
+
+<div>
+    Write a message to everyone:
+</div>
+<form>
+    Message:<input type="text" id='m'>
+    <button type="submit">Send</button>
+</form>
+
+<ul id="messages">
+</ul>
+<script src="/js/users.js"></script>

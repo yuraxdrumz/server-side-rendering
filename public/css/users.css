@@ -34,9 +34,14 @@
 .each_user {
     display: flex;
     width:50%;
-    background-color: beige;
     border-radius: 5px;
     margin-bottom: 0.8rem;
     margin-top: 0.8rem;
+    background-color: cadetblue;
 
+}
+
+.online {
+    color: greenyellow;
+    margin-left: 1rem;
 }

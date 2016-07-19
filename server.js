@@ -13,6 +13,8 @@ require('./config/passport')(passport);
 var port = process.env.PORT || 3000;
 var mongoose = require('mongoose');
 
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
 
 var webRouter = require('./routes/web');
 var apiRouter = require('./routes/api');
@@ -35,8 +37,13 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
 app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/node_modules'));
 
-
+io.on('connection', function(socket){
+  socket.on('chat message', function(msg){
+    io.emit('chat message', msg);
+  });
+});
 mongoose.Promise = require('bluebird');
 mongoose.connect('mongodb://localhost/test');
 var con = mongoose.connection;
@@ -48,7 +55,7 @@ con.once('open', function () {
     app.use('/api',apiRouter);
 
 
-    app.listen(port,function(){
+    http.listen(port,function(){
         console.log('server is up');
     });
 });
