@@ -1,6 +1,9 @@
 # server-side-rendering
 server side rendering using express,handlebars,passport for auth and socket.io will be added for live chat
 
+added:Google+ sign in,protected necessary routes such as edit and delete;
+
+
 things to add:
 
 Socket.io:
