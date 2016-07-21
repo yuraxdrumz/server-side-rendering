@@ -48,6 +48,12 @@ io.on('connection', function(socket){
     users[username] = socket.id;
     sockets[socket.id] = {username:username,socket:socket};
 
+    socket.on('private message',function(data){
+        var found = find(data.email);
+        socket.to(found).emit('private message',data.msg)
+
+    })
+
     socket.on('chat message', function(msg){
     io.emit('chat message', msg);
 
@@ -55,6 +61,10 @@ io.on('connection', function(socket){
   });
 });
 
+var find = function(username){
+    console.log(username)
+    return users[username]
+}
 
 
 
