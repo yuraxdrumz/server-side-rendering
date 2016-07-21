@@ -1,22 +1,13 @@
 <ul class="users_list">
   {{#each users}}
-   <div class="each_user">
+   <div class="each_user" >
         <li>First Name: {{this.first_name}}</li>
         <li>Email: {{this.local.email}}</li>
-        <button><a href="#">chat</a></button>
-<!--
-        <li class="online"><i class="fa fa-circle" aria-hidden="true"></i>
-</li>
--->
-<!--
-        <div class="button_div">
-            <button class="edit_button"><a href="/edit/{{this._id}}" class="edit_button">Edit</a></button>
-        </div>
--->
+        <button class="chat" data-email='{{this.local.email}}'>chat</button>
     </div>
   {{/each}}
 </ul>
-
+<div class="name" style="display: none;" data-name='{{user.local.email}}'></div>
 <div>
     Write a message to everyone:
 </div>
@@ -26,5 +17,11 @@
 </form>
 
 <ul id="messages">
+</ul>
+    private Message to send:<input type="text" id='private'>
+
+
+<ul id="private_messages">
+
 </ul>
 <script src="/js/users.js"></script>

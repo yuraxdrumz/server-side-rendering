@@ -39,11 +39,25 @@ app.use(flash());
 app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/node_modules'));
 
+
+var users = {};
+var sockets = {};
+
 io.on('connection', function(socket){
-  socket.on('chat message', function(msg){
+    var username = socket.handshake.query.name
+    users[username] = socket.id;
+    sockets[socket.id] = {username:username,socket:socket};
+
+    socket.on('chat message', function(msg){
     io.emit('chat message', msg);
+
+
   });
 });
+
+
+
+
 mongoose.Promise = require('bluebird');
 mongoose.connect('mongodb://localhost/test');
 var con = mongoose.connection;
